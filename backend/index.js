@@ -1,5 +1,5 @@
 // Import required modules
-const app = require("./app.js");
+const app = require("./src/app");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 
