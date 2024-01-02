@@ -10,8 +10,6 @@ const {
 // this are all the routers to get data fro api
 const router = express.Router();
 
-router.route("/").get(homePage);
-
 // route to create a subscriber
 router.route("/createSubs").post(createSubs);
 
