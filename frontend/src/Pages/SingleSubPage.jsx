@@ -6,7 +6,7 @@ const SingleSubPage = () => {
   const [user, setUser] = useState("");
   const { id } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:3001/sub/${id}`)
+    fetch(`https://youtube-alambetter.onrender.com/sub/${id}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data.sub);

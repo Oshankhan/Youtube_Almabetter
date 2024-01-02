@@ -5,11 +5,15 @@ import { Form, Button } from "react-bootstrap";
 const HomePage = () => {
   const createUser = async () => {
     try {
-      await axios.post("http://localhost:3001/createSubs", userCredentail, {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      await axios.post(
+        "https://youtube-alambetter.onrender.com/createSubs",
+        userCredentail,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
     } catch (error) {
       console.log(error);
     }

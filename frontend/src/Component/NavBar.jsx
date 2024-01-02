@@ -10,7 +10,7 @@ function NavBar() {
   const [search, setSearch] = useState("");
   const [suggestionList, setSuggestionList] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3001/subscribers")
+    fetch("https://youtube-alambetter.onrender.com/subscribers")
       .then((res) => res.json())
       .then((data) => {
         setSuggestionList(data.subs);
@@ -40,12 +40,17 @@ function NavBar() {
             style={{ maxHeight: "100px" }}
             navbarScroll
           >
-            <Link style={{ textDecoration: "none", color: "white" }} to="/">
+            <Link
+              style={{ textDecoration: "none", color: "white" }}
+              className="mx-2"
+              to="/"
+            >
               Home
             </Link>
 
             <Link
               to="/allSubs"
+              className="mx-2"
               style={{ textDecoration: "none", color: "white" }}
             >
               All Subscriber

@@ -6,7 +6,7 @@ const AllSubs = () => {
   const [users, setUsers] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3001/subscribers")
+    fetch("https://youtube-alambetter.onrender.com/subscribers")
       .then((res) => res.json())
       .then((data) => {
         setUsers(data);
